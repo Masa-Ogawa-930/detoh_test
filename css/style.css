@@ -151,9 +151,48 @@ h1 {
     gap:10px;
 }
 
+/*
+Lyrics
+================================================ */
+.lyricSection h2{
+    margin-bottom: 0px;
+}
+.lyricSection .credit{
+    margin-left: 10px;
+}
+.titleLine {
+    display: flex;
+    align-items: baseline;   /* 文字の下ラインを揃える */
+    gap: 12px;               /* h2 と credit の間の余白 */
+}
 .lyrics{
     white-space: pre-line;
     line-height: 1.8;
+}
+
+.toggle-btn {
+  background: #f3f3f3;
+  border: 1px solid #aaa;
+  padding: 3px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.toggle-btn:hover {
+  background: #e9e3e3;
+}
+
+
+
+.translation {
+    padding: 10px;
+    border-left: 4px solid #666;
+    background: #f7f7f7;
+    margin-bottom: 15px;
+}
+.hidden{
+    display: none;
 }
 
 /*
