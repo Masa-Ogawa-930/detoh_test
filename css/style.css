@@ -76,6 +76,13 @@ h1 {
     /* margin-top: 4px;   */
     margin-bottom: 4px;  
 }
+.profile img{
+    margin-left: 20px;
+}
+.profile p{
+    margin-left: 25px;
+}
+
 
 .section p,
 .members p,
@@ -141,6 +148,8 @@ h1 {
 .icon-rudolf{
     width: 17px;
     height: 17px;
+    margin-left: 3px;
+    margin-right: -3px;
 }
 
 .link-item {
@@ -154,6 +163,13 @@ h1 {
 /*
 Lyrics
 ================================================ */
+.backToHome{
+    margin-left: 30px;
+    line-height: 0px;
+    /* text-decoration-color: #b40606; */
+}
+
+
 .lyricSection h2{
     margin-bottom: 0px;
 }
