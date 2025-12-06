@@ -225,7 +225,24 @@ MOBILE SIZE
   .layout {
     display: block; /* 1列 */
   }
+    .titleLine{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+    .titleLine h2{
+        margin: 0px;
+        margin-bottom: 0px;
+    }
+
+    .titleLine p{
+        margin: 0px;
+        margin-bottom: 12px;
+    }
+
 }
+
+
 
 /* ▼ PC（700px以上） */
 @media (min-width: 700px) {
