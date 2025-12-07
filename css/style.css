@@ -13,7 +13,7 @@ body {
     padding: 20px;
     line-height: 1.3;
     font-size:17px;
-    background-color: #111;
+    background-color: #191919;
     /* background-color: rgba(3, 3, 3, 0.75); */
     /* background-color: #888; */
 }
@@ -88,11 +88,13 @@ h3{
     font-size: 40px;
     margin-top: 15px;
     margin-bottom: 10px;
+    font-size: 2rem;
 }
 
 .section h3{
     margin-left: 15px;
     margin-top: 4px;
+    font-size: 1.2rem;
     /* margin-bottom: 4px;   */
 }
 
@@ -346,7 +348,7 @@ MOBILE SIZE
     }
 
     .section h2{
-    margin-top: 12px;
+    margin-top: 15px;
 }
      
 }
