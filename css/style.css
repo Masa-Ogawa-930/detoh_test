@@ -94,6 +94,13 @@ h3{
     /* margin-bottom: 4px;   */
 }
 
+.section h2,
+.section h3 {
+  word-break: break-word;      /* 古めのブラウザ向けも含む */
+  overflow-wrap: break-word;   /* 推奨 */
+  white-space: normal;         /* 強制折り返しを許可 */
+}
+
 .profile h3{
     margin-left: 15px;
     /* margin-top: 4px;   */
@@ -224,6 +231,8 @@ h3{
 
 
 
+
+
 /*
 Lyrics
 ================================================ */
@@ -276,6 +285,8 @@ Lyrics
 .hidden{
     display: none;
 }
+
+
 
 /*
 MOBILE SIZE
@@ -331,7 +342,7 @@ MOBILE SIZE
     .section {
     margin: 1.5rem 0;
     }
-
+     
 }
 
 
