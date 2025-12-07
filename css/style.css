@@ -188,7 +188,7 @@ h3{
 }
 
 .streamingLinks img:hover{
-    box-shadow: 0 1px #ccc;
+    box-shadow: 0 0.7px #ccc;
     top: 2px;
 }
 
