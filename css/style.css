@@ -92,7 +92,7 @@ h3{
 
 .section h3{
     margin-left: 15px;
-    /* margin-top: 4px;   */
+    margin-top: 4px;  
     /* margin-bottom: 4px;   */
 }
 
@@ -344,6 +344,10 @@ MOBILE SIZE
     .section {
     margin: 1.5rem 0;
     }
+
+    .section h2{
+    margin-top: 8px;
+}
      
 }
 
