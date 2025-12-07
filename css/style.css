@@ -308,8 +308,8 @@ MOBILE SIZE
   .layout {
     display: block; /* 1列 */
     margin: 0rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
 
   }
