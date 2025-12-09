@@ -85,6 +85,7 @@ body {
     color: #333b40;
     font-weight: bold;
     margin-bottom: 4px;
+    margin-left: -10px;
 }
 /* -------------------- */
 
@@ -189,14 +190,24 @@ h3{
   white-space: normal;         /* 強制折り返しを許可 */
 }
 
+
 .profile h3{
     margin-left: 15px;
     /* margin-top: 4px;   */
     margin-bottom: 5px;  
 }
-.profile img{
+.profile-img{
+    display: flex;
+    justify-content: left;
     margin-left: 10px;
+    margin-bottom: 10px;
 }
+
+.profile-img img{
+    height: auto;
+    width: 250px;
+}
+
 .profile p{
     margin-left: 25px;
 }
@@ -300,6 +311,7 @@ h3{
 .ListOfSongs{
     padding-left:0px;
     list-style: none;
+    font-size: 19px;
 }
 
 .ListOfSongs li{
@@ -307,12 +319,12 @@ h3{
     margin:5px;
     padding-right:5px;
     width: fit-content;
-    transition: padding 0.3s, background-color 0.3s, font-size 0.1s ease-in-out;
+    transition: padding 0.3s, background-color 0.3s ease-in-out;
 }
 .ListOfSongs li:hover{
     background-color: rgba(18, 21, 222, 0.1);
     padding-left:7px;
-    font-size: 19px;
+    /* font-size: 20px; */
     text-decoration: underline;
 }
 
@@ -381,6 +393,7 @@ h3{
 .link-item {
     line-height: 1.8;
     margin-left: 0px;
+    font-size:19px;
 
 }
 
@@ -396,7 +409,7 @@ h3{
 
 .link-item a{
         padding-right:5px;
-        transition: padding 0.3s, background-color 0.3s, font-size 0.1s ease-in-out;
+        transition: padding 0.3s, background-color 0.3s ease-in-out;
 }
 
 .link-item a:hover{
@@ -404,7 +417,7 @@ h3{
 
     background-color: rgba(18, 21, 222, 0.1);
     border-radius: 5px;
-    font-size: 19px;
+    /* font-size: 19px; */
 }
 
 
@@ -596,6 +609,7 @@ obileMediaQuery = window.matchMedia('(max-width: 1080px)
         text-decoration: underline;
     }
 
+
     /* header{
         position:relative;
         display:flex;
@@ -631,3 +645,5 @@ obileMediaQuery = window.matchMedia('(max-width: 1080px)
         gap: 6px
     }
 }
+
+
