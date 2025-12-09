@@ -133,6 +133,9 @@ h3{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr) ; /* 3列 */
+    padding: 0 1.5rem;
 }
 
 .MV h3{
@@ -431,7 +434,7 @@ Lyrics
     /* background: rgb(240, 240, 255);*/ /*水色 */
     background: rgb(255, 255, 255); 
     margin-bottom: 15px;
-    margin-left: 30px;
+    margin-left: 110px;
     margin-top: -30px;
     display: block;
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -440,14 +443,20 @@ Lyrics
     display: none;
 }
 
+.backToHome{
+        display: flex;
+        justify-content: center;
+}
 
 
 
-
-/* スマホ（幅768px未満） 
+/* スマホ（幅1080px未満）★注意！
+ここのbp数字を修正した場合、歌詞ページの
+obileMediaQuery = window.matchMedia('(max-width: 1080px)
+の数値も合わせて修正すること。 
 ================================================ */
 
-@media (max-width: 767px) {
+@media (max-width: 1079px) {
   .layout {
     display: block; /* 1列 */
     margin: 0rem;
@@ -455,8 +464,8 @@ Lyrics
     padding-right: 0.5rem;
   }
     .titleLine{
-        flex-direction: column;
-        align-items: flex-start;
+        /* flex-direction: column; */
+        /* align-items: flex-start; */
         gap: 0.2rem;
     }
     .titleLine h2{
@@ -529,22 +538,18 @@ Lyrics
     padding-left: 0px;
     padding-right: 10px;
     margin-left: 0px;
-    margin-top:  10px;
+    margin-top:  20px;
     }
 
-}
-
-
-
-/* ▼ PC（768px以上） */
-@media (min-width: 768px) {
-    .layout {
-    display: grid;
-    grid-template-columns: repeat(3, 2fr) ; /* 3列 */
-    gap: 1.2rem; /* 余白 */
-    padding: 0 1.5rem;
-  }
 
 }
 
+/* 小さいモバイルデバイス
+======================================= */
+@media (max-width: 500px) {
 
+    .titleLine{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
