@@ -19,6 +19,15 @@ header {
     background-color: #191919; /* bodyと同じ黒基調 */
 }
 
+/* #google_translate_element{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-end;
+    top: -20px;
+    } */
+
+
 .social-icons {
     display: flex;
     padding-top:20px;
@@ -98,6 +107,7 @@ h3{
 .streamingLinks a{
     color: inherit;
     text-decoration: none;
+
 }
 .streamingLinks a:hover {
     text-decoration: underline; /* ホバーで下線（任意） */
@@ -231,7 +241,7 @@ h3{
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 .disco-card p{
-    margin-left: -5px;
+    margin-left: -15px;
     font-weight: bold;
 }
 
@@ -251,12 +261,14 @@ h3{
 }
 .blueHazePhoto{
     position: relative;
-    box-shadow: 0 2px #ccc;
+    top: 0px;
+    box-shadow: 0 0 0.4px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.2s;
 }
 
 .blueHazePhoto:hover{
-    box-shadow: 0 1px #ccc;
-    top: 2px;
+    box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.2);
+    top: -2px;
 }
 
 .streamingLinks{
@@ -270,16 +282,19 @@ h3{
 .streamingLinks img{
     position: relative;
     width: 80px;
+    top: 0px;
     /* height: 30px; */
     margin-right: 6px;
     margin-top: 15px;
-    box-shadow: 0 2px #ccc;
+    box-shadow: 0 0 0.4px rgba(0, 0, 0, 0.4); /* 影を柔らかくする */
+    transition: box-shadow 0.4s ease-out;
+
 }
 
 .streamingLinks img:hover{
     position: relative;
-    box-shadow: 0 0.7px #ccc;
-    top: 2px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); 
+    top: -2px;
 }
 
 .ListOfSongs{
@@ -302,15 +317,24 @@ h3{
     background-position: 0 50%; /* 左端から0、垂直方向の中央(50%)に配置 */
     /* 必要なら 50% を調整して画像を微調整 (例: 0 4px) */
 }
+
+.torchSongs{
+    list-style: none;
+    margin: 4px 0;
+    padding-left: 21px;
+    background-image: url('../images/tmp_torch_photo.jpg');
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 0 50%; 
+}
+
 .badge-eng {
     font-size: 0.9em;       /* 少し小さく */
     color: #888;           /* 控えめなグレー */
     margin-left: 5px;
     font-weight: normal;   /* 親要素が太字でも標準にする */
 }
-.ListOfSongs a + .badge-eng {
-    color: #888;
-}
+
 .icon{
     width: 18px;
     height: 18px;
@@ -337,8 +361,13 @@ h3{
 
 .link-item {
     line-height: 1.8;
-    margin-left: 20px;
+    margin-left: 0px;
 }
+
+.link-item a span{ /*linksのアイコンと文字との間のマージン*/
+    margin-left: 3px;
+}
+
 .links{
     gap:10px;
 }
@@ -497,7 +526,6 @@ obileMediaQuery = window.matchMedia('(max-width: 1080px)
         align-items: flex;
         justify-content: center;
         width: auto;
-        /* min-width: 500px; */
     }
     
     p {
@@ -518,10 +546,10 @@ obileMediaQuery = window.matchMedia('(max-width: 1080px)
         position:relative;
         top: 0px;
         padding-top: 3px;
-        font-size: 6vw;
-
-
+        font-size: clamp(10px, 6vw, 30px);
+        gap: 10px
     }
+
     /* header{
         position:relative;
         display:flex;
@@ -551,5 +579,9 @@ obileMediaQuery = window.matchMedia('(max-width: 1080px)
     .titleLine{
         flex-direction: column;
         align-items: flex-start;
+    }
+    .social-icons{
+        font-size: 6vw;
+        gap: 6px
     }
 }
