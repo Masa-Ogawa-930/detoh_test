@@ -536,7 +536,7 @@ Lyrics
 
 /* スマホ（幅1080px未満）★注意！
 ここのbp数字を修正した場合、歌詞ページの
-obileMediaQuery = window.matchMedia('(max-width: 1080px)
+mobileMediaQuery = window.matchMedia('(max-width: 1080px)
 の数値も合わせて修正すること。 
 ================================================ */
 
@@ -618,8 +618,21 @@ obileMediaQuery = window.matchMedia('(max-width: 1080px)
         display:flex;
     } */
 
+
+
+
+
+}
+
+
     /* モバイルのLyrics
+    768にしたので、横画面にすれば、翻訳を横に並べることができる。
+    ここのbp数字を修正した場合、歌詞ページの
+    mobileMediaQuery = window.matchMedia('(max-width: 1080px)
+    の数値も合わせて修正すること。 
     ====================================== */
+
+@media (max-width: 768px) {
     .lyricsAndTranslation {
     display: block;
     flex-direction:column;
@@ -631,8 +644,6 @@ obileMediaQuery = window.matchMedia('(max-width: 1080px)
     margin-left: 0px;
     margin-top:  20px;
     }
-
-
 }
 
 /* 小さいモバイルデバイス
