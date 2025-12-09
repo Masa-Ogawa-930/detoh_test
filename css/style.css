@@ -301,9 +301,25 @@ h3{
     padding-left:0px;
     list-style: none;
 }
-.blueHazeSongs{
+
+.ListOfSongs li{
+    border-radius: 5px;
+    margin:5px;
+    padding-right:5px;
+    width: fit-content;
+    transition: padding 0.3s, background-color 0.3s, font-size 0.1s ease-in-out;
+}
+.ListOfSongs li:hover{
+    background-color: rgba(18, 21, 222, 0.1);
+    padding-left:7px;
+    font-size: 19px;
+}
+
+.blueHazeSongs a{
     list-style: none;
     margin: 4px 0;
+    text-decoration: none;
+    color: inherit;
     
     /* 【変更点】アイコン分の左側スペースを確保 */
     padding-left: 21px; /* アイコンサイズ(18px) + マージン */
@@ -318,7 +334,9 @@ h3{
     /* 必要なら 50% を調整して画像を微調整 (例: 0 4px) */
 }
 
-.torchSongs{
+.torchSongs a{
+    text-decoration: none;
+    color: inherit;
     list-style: none;
     margin: 4px 0;
     padding-left: 21px;
@@ -330,7 +348,7 @@ h3{
 
 .badge-eng {
     font-size: 0.9em;       /* 少し小さく */
-    color: #888;           /* 控えめなグレー */
+    color: #655151;           /* 控えめなグレー */
     margin-left: 5px;
     font-weight: normal;   /* 親要素が太字でも標準にする */
 }
@@ -362,15 +380,32 @@ h3{
 .link-item {
     line-height: 1.8;
     margin-left: 0px;
+
 }
 
 .link-item a span{ /*linksのアイコンと文字との間のマージン*/
     margin-left: 3px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .links{
     gap:10px;
 }
+
+
+.link-item a{
+        padding-right:5px;
+        transition: padding 0.3s, background-color 0.3s, font-size 0.1s ease-in-out;
+}
+
+.link-item a:hover{
+    padding-left: 7px;
+
+    background-color: rgba(18, 21, 222, 0.1);
+    border-radius: 5px;
+    font-size: 19px;
+}
+
 
 #footer {
     color: white;          /* 文字色を白にする */
@@ -430,16 +465,19 @@ Lyrics
 }
 
 .toggle-btn {
-  background: #f3f3f3;
-  border: 1px solid #aaa;
+  background: #fbfbfb;
+  border: 0.2px solid #aaa;
+  /* margin-left: 30px; */
+  /* top: -22px; */ 
+  /* position: relative;*/
   padding: 3px 8px;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 
 .toggle-btn:hover {
-  background: #e9e3e3;
+  background: #f6f6f6;
 }
 
 .lyricsAndTranslation {
@@ -457,7 +495,7 @@ Lyrics
     padding: 0px;
     padding-left: 10px;
     padding-right: 10px;
-    border: 1px solid #999;
+    /* border: 1px solid #999; */
     border-radius: 10px;
     /* border-left: 4px solid #666; */
     /* background: rgb(240, 240, 255);*/ /*水色 */
