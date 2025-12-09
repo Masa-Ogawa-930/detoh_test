@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="detohma">
+    <meta name="description" content="神奈川を中心に活動するバンド、detohmaのHP">
     <link rel="icon" type="image/svg+xml" href="images/detohma_logo_round.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>detohma</title>
@@ -12,6 +12,10 @@
         <link href="css/style.css" rel="stylesheet">
     <!-- Awesome Font -->
         <script src="https://kit.fontawesome.com/369f8528a6.js" crossorigin="anonymous"></script>
+    <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- ヘッダー -->
@@ -19,35 +23,87 @@
         <script>
             fetch("header.html")
             .then(response => response.text())
-            .then(data => document.getElementById("header").innerHTML = data);
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            // 【追加した処理】ロゴリンクの無効化をヘッダー読み込み完了直後に実行
+                disableLogoLinkOnIndex();
+            });
+            
+            // 【追加した関数定義】
+            function disableLogoLinkOnIndex() {
+                // index.htmlでのみ実行されることが分かっているので、
+                // URLチェックは省略し、直接リンクを無効化します。
+                
+                // ヘッダー内のロゴ画像を囲むリンク要素を取得
+                const logoLink = document.querySelector('#header a[href="index.html"]');
+                
+                if (logoLink) {
+                    // クリックイベントのデフォルト動作（ページ遷移）を無効化
+                    logoLink.addEventListener('click', function(event) {
+                        event.preventDefault();
+                    });
+                    
+                    // (任意) クリックできないことを視覚的に示すCSSクラスを追加
+                    // logoLink.classList.add('disabled-link'); 
+                }
+            }
         </script>
 <!-- 本ページ -->
 
     <!-- <h1 id="pageTitle">detohma Info</h1> -->
     <div class ="layout">
-        <div class="section MV left">
-            <h2>MV</h2>
-            <h3>「BlueHaze」 MV</h3>
-            <!-- <iframe class="YTEmbed" width="560" height="315" 
-                src="https://www.youtube.com/embed/sn9_Bsf8AAs" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe> -->
-            <div class="embed-container YTEmbed">
-                <iframe src="https://www.youtube.com/embed/sn9_Bsf8AAs" allowfullscreen></iframe>
+        <div class="section news">
+            <h2>News</h2>
+
+            <!-- <p>2024年3月1日：1stミニアルバム「BlueHaze」とミュージックビデオをリリース。</p>
+            <p>2023年2月25日：結成しました</p>
+             -->
+            <!-- <div class="news-item">
+                <div class="news-date">2023年2月25日</div>
+                <div class="news-text">結成しました</div>
+            </div> -->
+            <div class="news-card">
+            <div class="date">2025年12月XX日</div>
+            <p>シングルとミュージックビデオをリリース！</p>
+            </div>
+            <div class="news-card">
+            <div class="date">2024年3月1日</div>
+            <p>1stミニアルバム「BlueHaze」とミュージックビデオをリリース！</p>
+            </div>
+            <div class="news-card">
+            <div class="date">2023年2月25日</div>
+            <p>detohma結成　※これは消す</p>
+            </div>
+
+
+        </div>
+        
+        <div class="section MV  ">
+            <h2>Videos</h2>
+            <div class="blueHazeMv mv-card">
+                <h3>"BlueHaze" Music Video</h3>
+                <!-- <iframe class="YTEmbed" width="560" height="315" 
+                    src="https://www.youtube.com/embed/sn9_Bsf8AAs" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe> -->
+                <div class="embed-container YTEmbed">
+                    <iframe src="https://www.youtube.com/embed/sn9_Bsf8AAs" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
 
-        <div class="section left">
+        <div class="section">
             <h2>Discography</h2>
-                <div class="Album_BlueHaze">
+                <div class="Album_BlueHaze disco-card">
                     
+                    <p>2024年3月1日</p>
                     <h3>1st mini album「BlueHaze」</h3>
-                    <p>2024/3/1 リリース</p>
+                    
                     <div class="blueHazeAlbumContent">
-                        <a href="https://linkco.re/63UQunRF"><img class="blueHazePhoto" src = "images/bluehaze_photo.png" width = "200px"></a>
+                        <a href="https://linkco.re/63UQunRF" target="_blank"><img class="blueHazePhoto" src = "images/bluehaze_photo.png" width = "200px"></a>
                     <p class="streamingLinks">
                         <a href="https://music.apple.com/jp/album/bluehaze-ep/1731579343" target="_blank" class ="applumusic">
                             <img src ="images/applemusic.png" alt="Apple Music">
@@ -63,56 +119,72 @@
                     </div>           
         </div>
 
-        <div class="section right profile">
+        <div class="section profile">
             <h2>Profile</h2>
-            <img src = "images/detohma_profile_filtered.jpg" width="200px">
-            <p>2023年2月結成。「デトーマ」と読みます。</p>
-            <h3>Members</h3>
-            <div class ="members">
-                <p>kazu (Guitar & Vocal)</p>
-                <p>hiro (Bass)</p>
-                <p>masa (Drums)</p>
+                <div class="card">
+                <img src = "images/detohma_profile_filtered.jpg" width="200px">
+                <p>2023年2月結成。「デトーマ」と読みます。</p>
+                <h3>Members</h3>
+                <div class ="members">
+                    <p>kazu (Guitar & Vocal)</p>
+                    <p>hiro (Bass)</p>
+                    <p>masa (Drums)</p>
+                </div>
             </div>
         </div>
-        <div class="section left songList">
+        <div class="section songList">
             <h2>Songs</h2>
-            <p><a href="bluehaze.html">BlueHaze</a></p>
-            <p>Episode</p>
-            <p>12</p>
-            <p>Forest</p>
-            <p>Smile</p>
-
+            <div class="card">
+                <ul class="ListOfSongs">
+                <li class="blueHazeSongs"><a href="bluehaze.html">BlueHaze </a><span class="badge-eng">EN</span></li>
+                <li class="blueHazeSongs">Episode</li>
+                <li class="blueHazeSongs">12</li>
+                <li class="blueHazeSongs">Forest</li>
+                <li class="blueHazeSongs">Smile</li>
+                <li>Torch <span class="badge-eng">EN</span></li>
+                </ul>
+            </div>
         </div>
-        <div class="section right links">
+        <div class="section links">
             <h2>Links</h2>
+            <div class="card">
                 <div class="projectLinks link-item">
                     <img src="images/rudolf.png" class="icon-rudolf">
-                    <a href="https://rdlfkz.github.io/"><span>kazu solo project: rudolf</span></a>
+                    <a href="https://rdlfkz.github.io/" target="_blank"><span>kazu solo project: rudolf</span></a>
                 </div>
                 <div class="link-item">
-                    <a href="https://www.youtube.com/@detohma">
+                    <a href="https://www.youtube.com/@detohma" target="_blank">
                 <i class="fa-brands fa-youtube"></i><span>YouTube</span>
                     </a>
                 </div>
                 <div class="link-item">
-                    <a href="https://www.instagram.com/detohma_band">
+                    <a href="https://open.spotify.com/artist/58TMYaBoaomqJIVU3InVML" target="_blank">
+                    <i class="fa-brands fa-spotify"></i><span>Spotify</span>
+                </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.instagram.com/detohma_band" target="_blank">
                 <i class="fa-brands fa-instagram"></i><span>Instagram</span>
                     </a>
                 </div>
                 <div class="link-item">
-                    <a href="https://x.com/detohma_band">
+                    <a href="https://x.com/detohma_band" target="_blank">
                 <i class="fa-brands fa-x-twitter"></i><span>X(Twitter)</span>
                     </a>
                 </div>
                 <div class="link-item">
-                    <a href="https://www.tunecore.co.jp/artists/detohma">
+                    <a href="https://www.tiktok.com/@detohma_band" target="_blank">
+                <i class="fa-brands fa-tiktok"></i><span>tiktok</span>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.tunecore.co.jp/artists/detohma" target="_blank">
                 <img src="images/tunecore.png" class="icon"><span>TuneCore</span>
                     </a>
                 </div>
-
+            </div>
         </div>
     </div>
-</div>    
     <footer id="footer">
         <ul class="copyright">
             <li>© 2023 detohma</li>

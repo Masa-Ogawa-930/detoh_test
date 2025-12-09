@@ -5,9 +5,47 @@
     max-width: 40vw;     /* 画面幅の40%を上限にする */
     height: auto;        /* 縦横比を崩さない */
 }
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+    display: flex; /* ロゴとアイコンを横並びにする */
+    justify-content: space-between; /* 両端に配置する (ロゴを左、アイコンを右) */
+    align-items: center; /* 垂直方向の中央揃え */
+    padding: 10px 20px; /* 上下左右に余白 */
+    background-color: #191919; /* bodyと同じ黒基調 */
+}
+
+.social-icons {
+    display: flex;
+    padding-top:20px;
+    gap: 15px; /* アイコン間のスペース */
+    font-size: 28px
+}
+
+.social-icons a {
+    color: #fff; /* アイコンの色を白に (黒背景に映えるように) */
+    text-decoration: none; /* 下線を消す */
+    transition: color 0.2s; /*ホバー時の滑らかな変化*/
+}
+
+/* ホバー時のスタイル */
+.social-icons a:hover {
+    color: #ccc; /* ホバーで少し明るい色にする */
+}
+
+.noto-serif-jp-300{
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Calibri, Noto Serif JP;
     max-width: 1500px;
     margin: 0 auto;
     padding: 20px;
@@ -17,6 +55,31 @@ body {
     /* background-color: rgba(3, 3, 3, 0.75); */
     /* background-color: #888; */
 }
+.card {
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* -------------------- */
+.news-card {
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.news-card .date {
+    color: #333b40;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+/* -------------------- */
+
+
 
 img {
     max-width: 100%;
@@ -48,7 +111,7 @@ h3{
 }
 .section {
     margin: 0.5rem 0;
-    border: 10px solid rgba(225, 255, 255, 0.15);
+    /* border: 10px solid rgba(225, 255, 255, 0.15); */
     border: 1px solid #999;
     outline: 0.5px solid #999;
     outline-offset: 4px;
@@ -77,11 +140,19 @@ h3{
     margin-bottom: 5px;
 }
 
+.mv-card {
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 .block {
     width: 100%;
 }
 .YTEmbed{
-    margin-left:40px;
+    margin-left:0px;
 }
 
 .section h2{
@@ -136,14 +207,29 @@ h3{
     overflow: hidden;
     max-width: 100%;
     margin: 0 auto;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
 }
 .embed-container iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.disco-card {
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.disco-card p{
+    margin-left: -5px;
+    font-weight: bold;
 }
 
 .Album_BlueHaze{
@@ -188,23 +274,53 @@ h3{
 }
 
 .streamingLinks img:hover{
+    position: relative;
     box-shadow: 0 0.7px #ccc;
     top: 2px;
 }
 
-.songList p{
-    margin-left: 20px;
+.ListOfSongs{
+    padding-left:0px;
+    list-style: none;
 }
-
-.icon-label {
-  display: flex;
-  align-items: center;
-  gap: 0px;
+.blueHazeSongs{
+    list-style: none;
+    margin: 4px 0;
+    
+    /* 【変更点】アイコン分の左側スペースを確保 */
+    padding-left: 21px; /* アイコンサイズ(18px) + マージン */
+    
+    /* 【変更点】画像を背景として設定 */
+    background-image: url('../images/bluehaze_photo.png');
+    background-repeat: no-repeat;
+    background-size: 18px 18px; /* アイコンのサイズを設定 */
+    
+    /* 【変更点】アイコンの位置を調整 */
+    background-position: 0 50%; /* 左端から0、垂直方向の中央(50%)に配置 */
+    /* 必要なら 50% を調整して画像を微調整 (例: 0 4px) */
 }
-
+.badge-eng {
+    font-size: 0.9em;       /* 少し小さく */
+    color: #888;           /* 控えめなグレー */
+    margin-left: 5px;
+    font-weight: normal;   /* 親要素が太字でも標準にする */
+}
+.ListOfSongs a + .badge-eng {
+    color: #888;
+}
 .icon{
     width: 18px;
     height: 18px;
+    position:relative;
+    top: 3px;
+}
+
+.icon-songs-bluehaze{
+    width: 18px;
+    height: 18px;
+    margin-right: 2px;
+    position:relative;
+    top: 3px;
 }
 
 .icon-rudolf{
@@ -212,6 +328,8 @@ h3{
     height: 17px;
     margin-left: 3px;
     margin-right: -3px;
+    position:relative;
+    top: 3px;
 }
 
 .link-item {
@@ -242,16 +360,30 @@ Lyrics
 ================================================ */
 .backToHome{
     display: inline-block;
-    margin-top: 20px;
-    margin-left: 10px;
+    margin-top: 50px;
+    margin-left: 0px;
     line-height: 0px;
     /* text-decoration-color: #b40606; */
 }
+.lyricSection{
+    margin-left:40px;;
+    max-width: 800px;
+    padding-top:10px;
 
+}
 
 .lyricSection h2{
+    margin-top: 0px;
     margin-bottom: 0px;
 }
+.icon-songs-bluehaze-lyrics{
+    width: 26px;
+    height: 26px;
+    margin-right: 4px;
+    position:relative;
+    top: 3px;
+}
+
 .lyricSection .credit{
     margin-left: 10px;
 }
@@ -278,13 +410,31 @@ Lyrics
   background: #e9e3e3;
 }
 
+.lyricsAndTranslation {
+ display: flex;
+ flex-direction:row;
+}
 
+.creditForTranslation{
+    font-style: italic;
+    /* font-size: 1rem; */
+}
 
 .translation {
-    padding: 10px;
-    border-left: 4px solid #666;
-    background: #f7f7f7;
+    position: relative;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    /* border-left: 4px solid #666; */
+    /* background: rgb(240, 240, 255);*/ /*水色 */
+    background: rgb(255, 255, 255); 
     margin-bottom: 15px;
+    margin-left: 30px;
+    margin-top: -30px;
+    display: block;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 .hidden{
     display: none;
@@ -292,42 +442,17 @@ Lyrics
 
 
 
-/*
-MOBILE SIZE
+
+
+/* スマホ（幅768px未満） 
 ================================================ */
-@media (max-width: 700px) {
-    .header-logo {
-        display: block;
-        margin: 0 auto; 
-    }
-    
-    p {
-        padding: 0 1rem;
-    }
-    p,
-    .menu-list li {
-        font-size: 1rem;
-    }
-    .hero {
-        padding-top: 12vh;
-    }
-.streamingLinks {
-        flex-direction: column;
-        gap: 12px;
-    }
-}
 
-
-
-/* スマホ（幅700px未満） */
-@media (max-width: 699px) {
+@media (max-width: 767px) {
   .layout {
     display: block; /* 1列 */
     margin: 0rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-
-
   }
     .titleLine{
         flex-direction: column;
@@ -350,13 +475,69 @@ MOBILE SIZE
     .section h2{
     margin-top: 15px;
 }
-     
+    .header-logo {
+        height: auto;
+        width: 400px;
+        max-width: 80vw;
+        display: block;
+        margin: 0 auto;
+    }
+    header{
+        /* display: inline-flex; */
+        flex-direction: column;
+        align-items: flex;
+        justify-content: center;
+        width: auto;
+        /* min-width: 500px; */
+    }
+    
+    p {
+        padding: 0 1rem;
+    }
+
+    p,
+    .menu-list li {
+        font-size: 1rem;
+    }
+
+    .streamingLinks {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .social-icons{
+        position:relative;
+        top: 0px;
+        padding-top: 3px;
+        font-size: 6vw;
+
+
+    }
+    /* header{
+        position:relative;
+        display:flex;
+    } */
+
+    /* モバイルのLyrics
+    ====================================== */
+    .lyricsAndTranslation {
+    display: block;
+    flex-direction:column;
+    }
+    .translation {
+    padding: 0px;
+    padding-left: 0px;
+    padding-right: 10px;
+    margin-left: 0px;
+    margin-top:  10px;
+    }
+
 }
 
 
 
-/* ▼ PC（700px以上） */
-@media (min-width: 700px) {
+/* ▼ PC（768px以上） */
+@media (min-width: 768px) {
     .layout {
     display: grid;
     grid-template-columns: repeat(3, 2fr) ; /* 3列 */
@@ -365,3 +546,5 @@ MOBILE SIZE
   }
 
 }
+
+
