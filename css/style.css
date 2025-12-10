@@ -204,6 +204,13 @@ h3{
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
+.mv-card:hover{
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background-color: rgba(63, 83, 237, 0.05);
+    position: relative;
+    top: -3px;
+}
+
 .block {
     width: 100%;
 }
