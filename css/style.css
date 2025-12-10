@@ -399,7 +399,7 @@ h3{
 .ListOfSongs{
     padding-left:0px;
     list-style: none;
-    font-size: 18px;
+    /* font-size: 18px; */
 }
 
 .ListOfSongs li{
