@@ -61,6 +61,22 @@ function googleTranslateElementInit() {
                     // logoLink.classList.add('disabled-link'); 
                 }
             }
+  // 【追加機能】スクロールイベントでヘッダーのスタイルを変更
+        window.addEventListener('scroll', function() {
+        const header = document.querySelector('#header header'); // #headerの中の<header>タグを取得
+        const scrollPosition = window.scrollY; // 垂直方向のスクロール量
+
+        // スクロール量が特定の閾値（例: 50ピクセル）を超えたらクラスを追加/削除
+        if (header) {
+            if (scrollPosition > 50) {
+                // スクロール量が50pxを超えたら 'scrolled-header' クラスを追加
+                header.classList.add('scrolled-header');
+            } else {
+                // スクロール量が50px以下に戻ったらクラスを削除
+                header.classList.remove('scrolled-header');
+            }
+        }
+    });
         </script>
 <!-- 本ページ -->
 
