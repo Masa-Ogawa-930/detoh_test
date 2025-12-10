@@ -712,7 +712,7 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
 
 
     /* モバイルのLyrics
-    768にしたので、横画面にすれば、翻訳を横に並べることができる。
+    768にしたので、スマホでも横画面にすれば、翻訳を横に並べることができる。
     ここのbp数字を修正した場合、歌詞ページの
     mobileMediaQuery = window.matchMedia('(max-width: 1080px)
     の数値も合わせて修正すること。 
@@ -757,6 +757,7 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
         padding:0px;
         margin-top: 8px;
         margin-bottom: 0px;
+        margin-left: 10px;
     }
     .social-icons i{
         font-size: 6vw;
@@ -777,3 +778,37 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
 }
 
 
+@media (min-width: 1080px) {
+    .layout {
+        display: grid;
+        /* 1fr:250px の比率で設定 (例: メインを広めに、サイドバーを250px固定幅に) */
+        grid-template-columns: 1fr 300px; /* メイン(可変幅)とサイドバー(300px固定)の2カラム */
+        gap: 1.5rem; /* メインとサイドバーの間のスペース */
+        
+        /* 既存の padding: 0 1.5rem; は維持 */
+        align-items: start;;
+    }
+        
+    /* メインコンテンツのスタイル */
+    .main-content {
+        /* グリッドの1列目を使用 */
+        grid-column: 1 / 2;
+        /* メインコンテンツ内では、セクションは縦に並ぶ (Flexbox or Block) */
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; /* セクション間のスペースを維持 */
+    }
+
+    /* サイドバーのスタイル */
+    .sidebar-content {
+        /* グリッドの2列目を使用 */
+        grid-column: 2 / 3;
+        /* サイドバー内のセクションを縦に並べる */
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; /* セクション間のスペースを維持 */
+        position:sticky;
+        top:70px;
+    }
+    
+}
