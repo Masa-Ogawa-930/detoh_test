@@ -590,7 +590,7 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
     padding-right: 0.5rem;
   }
   body{
-    padding-top: 90px;
+    padding-top: 100px;
   }
     .titleLine{
         /* flex-direction: column; */
