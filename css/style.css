@@ -449,10 +449,16 @@ h3{
 }
 
 .badge-eng {
-    font-size: 0.9em;       /* 少し小さく */
+    font-size: 0.9em;
+    font-style:italic;       /* 少し小さく */
     color: #655151;           /* 控えめなグレー */
     margin-left: 5px;
     font-weight: normal;   /* 親要素が太字でも標準にする */
+    background-color: rgba(244, 173, 7, 0.236);
+    border-radius: 5px;
+    padding-left:2px;
+    padding-right:2px;
+
 }
 
 .icon{
