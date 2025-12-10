@@ -313,6 +313,7 @@ h3{
 .album-title-and-links{
     display: flex;
     flex-direction:row;
+    gap:50px;
 }
 
 .Album_BlueHaze{
@@ -878,7 +879,13 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
     .scrolled-header .social-icons i{
         font-size: 15px;
     }
-
+    .streamingLinks{
+        display: flex;
+        flex-direction: column;
+    }
+    .streamingLinks img{
+        margin:0px 0px 0px 20px;
+    }
 
 }
 
@@ -914,6 +921,25 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
         gap: 0.5rem; /* セクション間のスペースを維持 */
         position:sticky;
         top:70px;
+    }
+    .disco-flex{
+        position:relative;
+        display: flex;
+        flex-direction:row;
+        gap: 20px;
+    }
+
+    .disco-card{
+        width:400px;
+    }
+
+    .videoCards{
+        display: flex;
+        flex-direction: row;
+        gap:15px;
+    }
+    .mv-card{
+        min-width: 500px;
     }
     
 }
