@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 .header-logo {
-    width: 400px;        /* 通常はこれくらいで表示 */
+    width: 300px;        /* 通常はこれくらいで表示 */
+    margin-left:50px;
     max-width: 40vw;     /* 画面幅の40%を上限にする */
     height: auto;        /* 縦横比を崩さない */
 }
@@ -52,10 +53,10 @@ header {
 
 /* スクロール時のロゴとアイコンのサイズ調整も content に合わせる */
 .scrolled-header .header-logo {
-    max-width: 30vw; /* ロゴの縮小 */
+    max-width: 150px; /* ロゴの縮小 */
 }
 .scrolled-header .social-icons {
-    font-size: 24px; /* アイコンの縮小 */
+    font-size: 20px; /* アイコンの縮小 */
 }
 
 /* #google_translate_element{
@@ -70,6 +71,7 @@ header {
 .social-icons {
     display: flex;
     padding-top:20px;
+    margin-right:35px;
     gap: 15px; /* アイコン間のスペース */
     font-size: 28px
 }
@@ -587,6 +589,9 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
+  body{
+    padding-top: 90px;
+  }
     .titleLine{
         /* flex-direction: column; */
         /* align-items: flex-start; */
@@ -612,21 +617,25 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
 
     .header-logo {
         height: auto;
-        width: 400px;
+        width: 280px;
         max-width: 80vw;
         display: block;
         margin: 0 auto;
+        margin-left: 10px;
     }
     .header-content{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        /* flex-direction: column; */
+        justify-content: space-between;
         width: auto;
         padding-top: 15px;
         padding-bottom: 10px;
     }
     
-
+    .social-icons{
+        margin-top: 20px;
+        margin-right: 0px;
+    }
     .social-icons i {
         font-size: 24px;
     }
@@ -634,21 +643,32 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
     header.scrolled-header{
         padding-top: 10px;
         padding-bottom: 5px;
+        /* padding-left: 20px; */
+        /* padding-right: 20px; */
     }
     .scrolled-header .header-content {
         padding-top: 0px; /* 上下のパディングを小さくして、ヘッダーの高さを縮小 */
+        padding-bottom: 0px;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .scrolled-header .social-icons  {
+        margin-top: 10px; /* アイコンの縮小 */
     }
 
     /* スクロール時のロゴとアイコンのサイズ調整も content に合わせる */
     .scrolled-header .header-logo {
         margin-top:0px;
         /* margin-bottom:0px; */
-        max-width: 300px; /* ロゴの縮小 */
+        max-width: 150px; /* ロゴの縮小 */
     }
     .scrolled-header .social-icons i {
-        font-size: 20px; /* アイコンの縮小 */
+        font-size: 18px; /* アイコンの縮小 */
     }
-    
+    .scrolled-header .social-icons{
+        margin-right:10px;
+    }
+
     p {
         padding: 0 1rem;
     }
@@ -716,7 +736,9 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
 /* 小さいモバイルデバイス
 ======================================= */
 @media (max-width: 500px) {
-
+    body{
+        padding-top: 80px;
+    }
     .titleLine{
         flex-direction: column;
         align-items: flex-start;
@@ -724,6 +746,30 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
     .social-icons{
         font-size: 6vw;
         gap: 6px
+    }
+        
+    .header-content{
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        padding:0px;
+    }
+    .social-icons{
+        padding:0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .header-logo{
+        width:200px;
+    }
+    .scrolled-header .header-content{
+        display: flex;
+        flex-direction: row;
+        padding: 0px 15px;
+    }
+    .scrolled-header .social-icons i{
+        font-size: 15px;
     }
 }
 
