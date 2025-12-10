@@ -152,9 +152,7 @@ h3{
     text-decoration: none;
 
 }
-.streamingLinks a:hover {
-    text-decoration: underline; /* ホバーで下線（任意） */
-}
+
 .links a{
     color: inherit;
     text-decoration: none;
