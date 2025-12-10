@@ -111,7 +111,7 @@ body {
     padding: 15px 20px;
     border-radius: 12px;
     margin-bottom: 14px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 /* -------------------- */
@@ -120,7 +120,7 @@ body {
     padding: 15px 20px;
     border-radius: 12px;
     margin-bottom: 14px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .news-card .date {
@@ -187,7 +187,7 @@ h3{
     flex-direction: column;
     gap: 1.5rem;
     display: grid;
-    grid-template-columns: repeat(3, 2fr) ; /* 3列 */
+    /* grid-template-columns: repeat(3, 2fr) ;  */
     padding: 0 1.5rem;
 }
 
@@ -201,7 +201,7 @@ h3{
     padding: 15px 20px;
     border-radius: 12px;
     margin-bottom: 14px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .block {
@@ -232,6 +232,11 @@ h3{
   white-space: normal;         /* 強制折り返しを許可 */
 }
 
+.profileName{
+    font-size:20px;
+    font-style:oblique;
+    margin-bottom: 5px;
+}
 
 .profile h3{
     margin-left: 15px;
@@ -298,6 +303,18 @@ h3{
     /* font-weight: bold; */
 }
 
+.disco-card:hover{
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        background-color: rgba(63, 83, 237, 0.05);
+        position: relative;
+        top: -3px;
+}
+
+.album-title-and-links{
+    display: flex;
+    flex-direction:row;
+}
+
 .Album_BlueHaze{
     display: block;
 }
@@ -307,7 +324,7 @@ h3{
 
 .blueHazeAlbumContent{
     display:flex;
-    align-items: center;
+    align-items: flex-start;
     min-width: 0;
     gap: 12px;
     
@@ -324,30 +341,57 @@ h3{
     top: -2px;
 }
 
+.BlueHazeAlbumSongs{
+    display: flex;
+    flex-direction: column;
+    top:15px;
+    position:relative;
+}
+
+
+.BlueHazeAlbumSongs span{
+    margin-left:15px;
+    
+}
+
+.BlueHazeAlbumSongs ol{
+    margin-top:5px;
+}
+
 .streamingLinks{
     display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-direction: column;
+    gap: 8px;
     margin: 20px 0;
+    position: relative;
+    top:15px;
+    text-decoration: none;
 }
 
 .streamingLinks img{
     position: relative;
-    width: 80px;
+    width: 60px;
     top: 0px;
     /* height: 30px; */
     margin-right: 6px;
     margin-top: 15px;
     box-shadow: 0 0 0.4px rgba(0, 0, 0, 0.4); /* 影を柔らかくする */
     transition: box-shadow 0.4s ease-out;
-
 }
 
 .streamingLinks img:hover{
     position: relative;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); 
     top: -2px;
+}
+
+.spotify img{
+    width:55px;
+}
+
+.songList .card{
+    padding-top: 1px;
+    padding-bottom: 1px;
+
 }
 
 .ListOfSongs{
@@ -488,8 +532,20 @@ Lyrics
     line-height: 0px;
     /* text-decoration-color: #b40606; */
 }
+.lyricPageBody{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    gap:20px;
+}
+.sidebar-content-for-lyrics{
+    width:400px;
+    margin-right:20px;
+}
+
 .lyricSection{
     margin-left:40px;;
+    width:800px;
     max-width: 800px;
     padding-top:10px;
 
@@ -678,10 +734,10 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
         font-size: 1rem;
     }
 
-    .streamingLinks {
-        flex-direction: column;
+    /* .streamingLinks {
+        flex-direction: row;
         gap: 12px;
-    }
+    } */
 
     .social-icons{
         position:relative;
@@ -704,9 +760,30 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
         display:flex;
     } */
 
+    .lyricPageBody{
+        display: flex;
+        flex-direction: column;
+        margin-right:20px;
+        /* padding-right:10px; */
+        /* margin-left: 40px; */
+        gap:0px;
+    }
 
+    .lyricSection{
+        margin-bottom:10px;
+        margin-left:40px;
+        padding-right:0px;
+        margin-right:20px;
+        width: auto;
+    }
 
+    .sidebar-content-for-lyrics{
+    margin-left: 40px;
+    margin-right:20px;
+    width:auto;
+    }
 
+    
 
 }
 
@@ -782,7 +859,7 @@ mobileMediaQuery = window.matchMedia('(max-width: 1080px)
     .layout {
         display: grid;
         /* 1fr:250px の比率で設定 (例: メインを広めに、サイドバーを250px固定幅に) */
-        grid-template-columns: 1fr 300px; /* メイン(可変幅)とサイドバー(300px固定)の2カラム */
+        grid-template-columns: 1fr 350px; /* メイン(可変幅)とサイドバー(300px固定)の2カラム */
         gap: 1.5rem; /* メインとサイドバーの間のスペース */
         
         /* 既存の padding: 0 1.5rem; は維持 */

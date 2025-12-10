@@ -40,11 +40,20 @@
             }
         }
     });
+
+        fetch("songlist.html")
+    .then(response => response.text())
+    .then(data => {
+        const placeholder = document.getElementById("songListPlaceholder");
+        if(placeholder){
+            placeholder.innerHTML = data;
+        }
+    })
         </script>
 <!-- 本ページ -->
 
 
-
+<div class="lyricPageBody">
     <div class="section lyricSection">
 
         <div class="titleLine">
@@ -151,6 +160,11 @@
     <p>もしくは、英詞が隣に出るようにする？</p> -->
           <p><a  class="backToHome" href="index.html">Back to Home</a></p>
 
+</div>
+
+<div class="sidebar-content-for-lyrics" >
+    <div id="songListPlaceholder"></div> 
+</div>
 </div>
 
 <script>
