@@ -82,6 +82,7 @@ function googleTranslateElementInit() {
 
     <!-- <h1 id="pageTitle">detohma Info</h1> -->
     <div class ="layout">
+    <div class="main-content"> <!--メインを囲う。これらはPCでメイン表示-->
         <div class="section news">
             <h2>News</h2>
 
@@ -179,7 +180,21 @@ function googleTranslateElementInit() {
                 </div> <!-- class="Album_BlueHaze disco-card"の閉じタグ-->
 
         </div>
-
+            <div class="section songList">
+                <h2>Songs</h2>
+                <div class="card">
+                    <ul class="ListOfSongs">
+                    <li class="blueHazeSongs"><a href="bluehaze.html">BlueHaze </a><span class="badge-eng">ENG</span></li>
+                    <li class="blueHazeSongs"><a href="###">Episode</a></li>
+                    <li class="blueHazeSongs"><a href="###">12</a></li>
+                    <li class="blueHazeSongs"><a href="###">Forest</a></li>
+                    <li class="blueHazeSongs"><a href="###">Smile</a></li>
+                    <li class="torchSongs"><a href="###">Torch</a> <span class="badge-eng">ENG</span></li>
+                    </ul>
+                </div>
+            </div>
+    </div> <!-- main-contentの閉じタグ-->
+    <div class="sidebar-content">
         <div class="section profile">
             <h2>Profile</h2>
                 <div class="card">
@@ -198,19 +213,7 @@ function googleTranslateElementInit() {
                 </div>
             </div>
         </div>
-        <div class="section songList">
-            <h2>Songs</h2>
-            <div class="card">
-                <ul class="ListOfSongs">
-                <li class="blueHazeSongs"><a href="bluehaze.html">BlueHaze </a><span class="badge-eng">ENG</span></li>
-                <li class="blueHazeSongs"><a href="###">Episode</a></li>
-                <li class="blueHazeSongs"><a href="###">12</a></li>
-                <li class="blueHazeSongs"><a href="###">Forest</a></li>
-                <li class="blueHazeSongs"><a href="###">Smile</a></li>
-                <li class="torchSongs"><a href="###">Torch</a> <span class="badge-eng">ENG</span></li>
-                </ul>
-            </div>
-        </div>
+
         <div class="section links">
             <h2>Links</h2>
             <div class="card">
@@ -250,6 +253,7 @@ function googleTranslateElementInit() {
                     </a>
                 </div>
             </div>
+        </div>
         </div>
     </div>
     </div>
