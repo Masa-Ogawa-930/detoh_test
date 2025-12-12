@@ -825,6 +825,9 @@ ul.ListOfSongs{
     text-align: center;
     padding: 20px 0;
 }
+#footer_black ul {
+    list-style: none;
+}
 
 #home-page-black::before{
     background-color: #191919;
