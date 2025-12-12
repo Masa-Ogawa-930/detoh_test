@@ -624,13 +624,14 @@ ul.ListOfSongs{
     /* Layout Adjustments */
     .streamingLinks { flex-direction: row; }
     .streamingLinks img { margin-top: 0px; }
-    .applemusic img { width: 60px; position:relative; bottom: 1px;}
+    .applemusic img { width: 55px; position:relative; bottom: 0px;}
     .spotify img { width: 55px; }
 
     /* Lyric Page */
     .lyricPageBody {
         flex-direction: column;
         justify-content: center;
+        gap:10px;
         /* margin-right: 20px; */
     }
     .lyricSection, .sidebar-content-for-lyrics {
@@ -638,11 +639,11 @@ ul.ListOfSongs{
         margin-right: 20px;
         width: auto;
     }
-        /* 1. Back to Home の上の余白を削る（50px → 20px） */
+        /* 1. Back to Home の上の余白を削る（50px → 25px） */
     .backToHome {
-        margin-top: 20px;
+        margin-top: 25px;
         color: #333;
-        font-size: 15px;
+        font-size: 16px;
         /* transform: translatex(-8px); */
     }
 
