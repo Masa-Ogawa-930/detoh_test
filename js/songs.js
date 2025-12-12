@@ -256,7 +256,7 @@ Something that can’t disappear
     },
 "forest": {
         title: "Forest",
-        credit: "<span class='credit-label'>Music:</span> kazu &nbsp;&nbsp; <span class='credit-label'>Lyrics:</span> kazu, octa",
+        credit: "<span class='credit-label'>Music:</span> kazu&nbsp;/&nbsp;<span class='credit-label'>Lyrics:</span> kazu, octa",
         image: "images/bluehaze_photo.png",
         lyricsJa: `
 ありふれた日々の
@@ -332,8 +332,8 @@ Something that can’t disappear
         lyricsEn: "", 
         transCredit: ""
     },
-"曲名": {
-        title: "曲名",
+"曲名(すべて小文字で": {
+        title: "曲名(大文字可)",
         credit: "<span class='credit-label'>Music & Lyrics:</span> kazu",
         image: "images/bluehaze_photo.png",
         lyricsJa: `

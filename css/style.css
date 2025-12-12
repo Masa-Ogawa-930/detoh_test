@@ -585,6 +585,14 @@ ul.ListOfSongs{
 .lyrics {
     white-space: pre-line;
     line-height: 1.8;
+      /* --- 追加：文字選択を禁止 --- */
+    user-select: none;         /* 標準 */
+    -webkit-user-select: none; /* Safari/Chrome用 */
+    -moz-user-select: none;    /* Firefox用 */
+    -ms-user-select: none;     /* IE/Edge用 */
+    
+    /* カーソルも「テキスト選択」の形（I）ではなく「矢印」にする */
+    cursor: default;
 }
 .toggle-btn {
     background: #fbfbfb;

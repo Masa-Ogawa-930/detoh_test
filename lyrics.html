@@ -86,6 +86,9 @@
 
             // 3. URLパラメータから曲データをロード
             loadSongData();
+
+            // コピー禁止設定を実行
+            disableCopying();
         });
 
         function loadSongData() {
@@ -118,6 +121,29 @@
                 document.querySelector('.lyricSection').innerHTML = '<p>Song not found.</p><p><a href="index.html">Back to Home</a></p>';
             }
         }
+ // 歌詞エリアに対するコピー禁止処理
+        function disableCopying() {
+            // 歌詞が表示される要素を取得（日本語と英語）
+            const targets = document.querySelectorAll('.lyrics');
+
+            targets.forEach(element => {
+                // 1. 右クリック（コンテキストメニュー）を禁止
+                element.addEventListener('contextmenu', (e) => {
+                    e.preventDefault();
+                });
+
+                // 2. コピー操作（Ctrl+Cなど）を禁止
+                element.addEventListener('copy', (e) => {
+                    e.preventDefault();
+                });
+                
+                // 3. 切り取り操作（Ctrl+X）を禁止
+                element.addEventListener('cut', (e) => {
+                    e.preventDefault();
+                });
+            });
+        }
+
 
         // スクロール制御関数
         function initScrollEvent() {
