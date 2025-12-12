@@ -17,6 +17,9 @@
     --header-height-base: 110px;
     --header-height-mobile: 100px;
 }
+#song-credit{
+    margin-left: 10px;
+}
 .credit-label {
     font-size: 0.9em; /* 少し小さく */
     color: #191919;      /* グレーにして控えめに */
