@@ -698,7 +698,7 @@ ul.ListOfSongs{
     
     .layout {
         display: block; /* 1列 */
-        padding: 0 0.5rem;
+        padding: 0 1.5rem;
     }
     
     .section { margin: 1.5rem 0; }
@@ -787,6 +787,10 @@ ul.ListOfSongs{
 /* Mobile (Small Screens) */
 @media (max-width: 768px) {
 
+    .section{
+        padding-right: 16px;
+        padding-left: 16px;
+    }
     .disco-flex {
         display: flex;
         flex-direction: column;
