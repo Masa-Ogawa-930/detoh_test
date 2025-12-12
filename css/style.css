@@ -331,19 +331,67 @@ header {
 .spotify img { width: 75px; }
 
 /* スマホ用の調整（画面幅が狭すぎる場合） */
-@media (max-width: 450px) {
+@media (max-width: 400px) {
+    /* 1. 全体を縦並びにして、中央に配置 */
     .disco-body {
-        flex-direction: column; /* 画像と収録曲を縦積みにする */
-        align-items: center;    /* 中央揃え */
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
+
+    /* 2. 画像の幅を200pxに固定 */
     .disco-img {
         flex: 0 0 auto;
-        width: 200px;           /* 画像を少し大きく */
+        width: 200px;
     }
+
+    /* 3. 詳細エリアの幅も画像と同じ「200px」にする */
     .disco-detail {
+        width: 200px; /* ここがポイントです */
+        /* 幅を揃えた上で、中身は左寄せにする */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* 4. 収録曲リストの調整 */
+    .tracklist {
         width: 100%;
+        text-align: left; /* 左揃え */
+    }
+
+    /* タイトル「【収録曲】」 */
+    .tracklist span {
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+        /* 画像の左端ギリギリに合わせたい場合は margin-left を微調整 */
+    }
+
+    /* リスト部分 */
+    .tracklist ol {
+        text-align: left;
+        margin: 0;
+        /* 数字のために左に余白が必要ですが、
+           「画像の左端」に「数字」を合わせたい場合は padding-left: 20px 程度推奨
+           「画像の左端」に「文字」を合わせたい場合は padding-left: 0; list-style-position: inside; 推奨
+        */
+        padding-left: 20px; 
+    }
+    
+    .tracklist li {
+        /* display: flexなどは削除し、標準に戻す */
+        display: list-item;
+    }
+
+    /* ストリーミングリンクも左端から始める */
+    .streamingLinks {
+        justify-content: flex-start;
+        /* 必要であれば左のマージンを微調整 */
+        margin-left: -5px; 
     }
 }
+
 
 
 /* Profile & Links Sidebar */
@@ -733,4 +781,5 @@ ul.ListOfSongs{
         padding-right: 16px;
 
     }
+
 }
