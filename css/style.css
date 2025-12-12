@@ -329,12 +329,14 @@ header {
     background-color: rgba(18, 21, 222, 0.1);
     border-radius: 5px;
 }
-.icon, .icon-rudolf {
+.icon-tunecore, .icon-rudolf {
     width: 18px; height: 18px;
-    position: relative; top: 3px;
-    margin-right: 3px;
+    position: relative;
+    bottom: 5px;
+    margin-right: 2px;
 }
-.icon-rudolf { width: 17px; height: 17px; }
+
+.icon-rudolf { width: 17px; height: 17px; margin-right: 0px; margin-left: 1px;}
 
 /* Song List Specific */
 .ListOfSongs {
@@ -369,7 +371,7 @@ header {
     font-style: italic;
     color: #655151;
     margin-left: 5px;
-    background-color: rgba(244, 173, 7, 0.236);
+    background-color: rgba(18, 21, 222, 0.1);;
     border-radius: 5px;
     padding: 0 2px;
 }
@@ -439,7 +441,7 @@ header {
     border-radius: 10px;
     background: rgb(255, 255, 255);
     margin-bottom: 15px;
-    margin-left: 110px;
+    margin-left: 50px;
     margin-top: -30px;
     display: block;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
@@ -564,6 +566,27 @@ header {
         margin-right: 20px;
         width: auto;
     }
+        /* 1. Back to Home の上の余白を削る（50px → 20px） */
+    .backToHome {
+        margin-top: 20px; 
+    }
+
+    /* 2. 歌詞セクションと下のセクションの隙間を詰める */
+    .lyricSection {
+        margin-bottom: 10px;
+        margin-left: 40px;
+        padding-right: 0px;
+        margin-right: 20px;
+        
+        width: auto; 
+        max-width: none;
+    }
+
+    /* 3. 歌詞ページ専用のサイドバー（Songlist）の上の余白を詰める */
+    .sidebar-content-for-lyrics .section {
+        margin-top: 0px; 
+    }
+
     .titleLine { gap: 0.2rem; }
     .titleLine h2, .titleLine p { margin-bottom: 0; }
 }
@@ -581,7 +604,7 @@ header {
 }
 
 /* Extra Small Mobile */
-@media (max-width: 500px) {
+@media (max-width: 590px) {
     body { padding-top: 80px; }
     
     .titleLine {
@@ -592,15 +615,14 @@ header {
     .header-content { flex-direction: column; }
     header { padding: 0; }
     
-    .header-logo { width: 200px; }
+    .header-logo { width: 220px; }
     
     .social-icons {
-        font-size: 6vw;
         gap: 6px;
         padding: 0;
-        margin: 8px 0 0 10px;
+        margin: 0px 0 0 10px;
     }
-    .social-icons i { font-size: 6vw; }
+    .social-icons i { font-size: 20px; }
     
     .scrolled-header .header-content {
         flex-direction: row;
