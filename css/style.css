@@ -530,7 +530,7 @@ ul.ListOfSongs{
 #footer {
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 0px 0 20px 0;
 }
 #footer ul {
     list-style: none;
@@ -626,6 +626,7 @@ ul.ListOfSongs{
 .hidden { display: none; }
 .backToHome {
     display: flex;
+    color: #333;
     justify-content: center;
     margin-top: 50px;
 }
