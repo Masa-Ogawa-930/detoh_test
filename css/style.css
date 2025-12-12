@@ -433,13 +433,13 @@ ul.ListOfSongs{
 .torchSongs a { background-image: url('../images/tmp_torch_photo.jpg'); }
 
 .badge-eng {
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-style: italic;
     color: #655151;
     margin-left: 5px;
     background-color: rgba(18, 21, 222, 0.1);;
     border-radius: 5px;
-    padding: 0 2px;
+    padding: 0px 4px 0px 2px;
 }
 
 /* Footer */
@@ -511,6 +511,7 @@ ul.ListOfSongs{
     margin-top: -30px;
     display: block;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    scroll-margin-top: 45px;
 }
 .hidden { display: none; }
 .backToHome {
