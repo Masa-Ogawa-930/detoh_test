@@ -676,6 +676,8 @@ ul.ListOfSongs{
     }
     .translation {
         padding: 7px 0;
+        padding-left:10px;
+        transform: translateX(-10px);
         margin: 20px 0 0 0;
     }
 }
