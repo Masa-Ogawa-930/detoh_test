@@ -141,6 +141,8 @@
                 element.addEventListener('cut', (e) => {
                     e.preventDefault();
                 });
+                el.style.userSelect = 'none';
+                el.style.webkitUserSelect = 'none';
             });
         }
 
