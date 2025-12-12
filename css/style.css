@@ -592,6 +592,10 @@ ul.ListOfSongs{
     
     .section { margin: 1.5rem 0; }
 
+    .disco-flex {
+        /* flex-wrap: wrap; */
+        justify-content: space-evenly;
+    }
     
     /* Header Adjustments */
     .header-logo {
@@ -671,6 +675,14 @@ ul.ListOfSongs{
 
 /* Mobile (Small Screens) */
 @media (max-width: 768px) {
+
+    .disco-flex {
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        justify-content: space-evenly;
+        gap: 10px;
+    }
     .lyricsAndTranslation {
         display: block;
         flex-direction: column;
