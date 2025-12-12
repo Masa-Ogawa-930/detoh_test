@@ -169,7 +169,7 @@ header {
     margin: 1rem 0;
     border: 1px solid #999;
     outline: 0.5px solid #999;
-    outline-offset: 4px;
+    outline-offset: 2px;
     border-radius: 10px;
     padding: 0 2rem 1rem 2rem;
     background-color: #fff;
@@ -240,7 +240,6 @@ header {
 /* Discography Layout (Updated) */
 .disco-flex {
     display: flex;
-    flex-direction: column;
     gap: 15px;
 }
 
@@ -267,6 +266,7 @@ header {
     flex-direction: row; /* 横並び */
     gap: 20px;
     align-items: flex-start;
+    justify-content: space-evenly;
 }
 
 /* 左：画像エリア */
@@ -560,7 +560,7 @@ ul.ListOfSongs{
     .disco-card { 
         width: 100%;
         max-width: 430px; /* カード自体の幅制限 */
-        flex: 1 1 400px;
+        flex: 1 1 300px;
     }
 
     /* PCでは画像の固定幅を少し大きくしてもOK */
@@ -592,6 +592,7 @@ ul.ListOfSongs{
     }
     
     .section { margin: 1.5rem 0; }
+
     
     /* Header Adjustments */
     .header-logo {
