@@ -17,7 +17,12 @@
     --header-height-base: 110px;
     --header-height-mobile: 100px;
 }
-
+.credit-label {
+    font-size: 0.9em; /* 少し小さく */
+    color: #191919;      /* グレーにして控えめに */
+    font-weight: normal;
+    margin-right: 2px;
+}
 /* シンプルなReset */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -554,6 +559,16 @@ ul.ListOfSongs{
     max-width: 800px;
     padding-top: 10px;
 }
+
+/* 歌詞ページ用ジャケットアイコン（全曲共通） */
+.song-jacket-icon {
+    width: 40px; 
+    height: 40px;
+    margin-right: 4px;
+    position: relative; 
+    bottom: 0px;
+    border-radius: 4px; /* お好みで */
+}
 .titleLine {
     display: flex;
     align-items: baseline;
@@ -593,6 +608,9 @@ ul.ListOfSongs{
     display: block;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     scroll-margin-top: 45px;
+}
+#translator-credit{
+    font-style: italic;
 }
 .hidden { display: none; }
 .backToHome {
