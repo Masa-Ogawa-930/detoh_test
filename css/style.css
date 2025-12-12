@@ -169,7 +169,7 @@ header {
     margin: 1rem 0;
     border: 1px solid #999;
     outline: 0.5px solid #999;
-    outline-offset: 2px;
+    outline-offset: 4px;
     border-radius: 10px;
     padding: 0 2rem 1rem 2rem;
     background-color: #fff;
@@ -266,7 +266,6 @@ header {
     flex-direction: row; /* 横並び */
     gap: 20px;
     align-items: flex-start;
-    justify-content: space-evenly;
 }
 
 /* 左：画像エリア */
