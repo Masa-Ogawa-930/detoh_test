@@ -26,7 +26,7 @@
 body {
     /* フォントフォールバックの追加: 特定のOSに依存しないように */
     font-family: "Noto Serif JP", Calibri, "Hiragino Mincho ProN", serif;
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
     padding-top: var(--header-height-base);
     line-height: 1.3;
@@ -233,60 +233,115 @@ header {
     gap: 15px;
 }
 
-/* Discography */
+/* Discography Layout (Updated) */
 .disco-flex {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 15px;
 }
-.album-title-and-links {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-}
-.streamingLinks {
-    display: flex;
-    gap: 8px;
-    position: relative;
-    top: 15px;
-}
-.streamingLinks img {
-    margin-right: 6px;
-    margin-top: 15px;
-    box-shadow: 0 0 0.4px rgba(0, 0, 0, 0.4);
-    transition: box-shadow 0.4s ease-out, top 0.4s ease-out;
-}
-.streamingLinks img:hover {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    position: relative;
-    top: -2px;
-}
-.applemusic img { width: 80px; }
-.spotify img { width: 75px; }
 
-.blueHazeAlbumContent {
+/* カード内部：上（ヘッダー） */
+.disco-header {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee; /* タイトル下に薄い線 */
+    padding-bottom: 5px;
+}
+.disco-header .release-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 2px;
+    margin-left: 0; /* 必要に応じて調整 */
+}
+.disco-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+/* カード内部：下（画像＋詳細） */
+.disco-body {
     display: flex;
+    flex-direction: row; /* 横並び */
+    gap: 20px;
     align-items: flex-start;
-    gap: 12px;
 }
-.blueHazePhoto {
-    box-shadow: 0 0 0.4px rgba(0, 0, 0, 0.4);
-    transition: box-shadow 0.2s, top 0.2s;
+
+/* 左：画像エリア */
+.disco-img {
+    flex: 0 0 150px; /* 幅を150pxに固定（スマホでも小さすぎないように） */
 }
-.blueHazePhoto:hover {
-    box-shadow: 0 0.5px 6px rgba(0, 0, 0, 0.2);
-    position: relative;
-    top: -2px;
+.disco-img img {
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
 }
-.BlueHazeAlbumSongs {
+.disco-img img:hover {
+    transform: translateY(-2px);
+}
+
+/* 右：詳細エリア（収録曲＋リンク） */
+.disco-detail {
+    flex: 1; /* 残りの幅を使う */
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
+    gap: 0px; /* 収録曲とリンクの間隔 */
 }
-.BlueHazeAlbumSongs ol {
-    margin-top: 5px;
-    padding-left: 25px; /* 番号が見えるように調整 */
+
+/* 収録曲リスト */
+.tracklist span {
+    font-weight: bold;
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 5px;
 }
+.tracklist ol {
+    margin: 0;
+    padding-left: 25px;
+}
+.tracklist li {
+    margin-bottom: 2px;
+}
+
+/* ストリーミングリンク（最新スタイル） */
+.streamingLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 5px; 
+    padding-bottom: 2px;
+}
+
+/* リンク内の画像設定 */
+.streamingLinks img {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ホバー時の動き */
+.streamingLinks a:hover img {
+    transform: translateY(-3px);
+    /* 影を濃くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.applemusic img { width: 80px; } /*spotify imgの方が元々大きいので、appleの方を5pxだけ大きくする*/
+.spotify img { width: 75px; }
+
+/* スマホ用の調整（画面幅が狭すぎる場合） */
+@media (max-width: 450px) {
+    .disco-body {
+        flex-direction: column; /* 画像と収録曲を縦積みにする */
+        align-items: center;    /* 中央揃え */
+    }
+    .disco-img {
+        flex: 0 0 auto;
+        width: 200px;           /* 画像を少し大きく */
+    }
+    .disco-detail {
+        width: 100%;
+    }
+}
+
 
 /* Profile & Links Sidebar */
 .profileName {
@@ -481,19 +536,24 @@ header {
         top: 100px; /* ヘッダー分考慮 */
     }
     
-    /* Discographyの調整 */
+    /* Discographyの調整 (PC版 Update) */
     .disco-flex {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap; /* 【修正】画面が狭いときは折り返すようにする */
-        justify-content: center; /* 折り返したときに中央寄せ */
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         gap: 15px;
     }
     
     .disco-card { 
-        width: 100%; /* 基本は親に合わせて伸縮 */
-        max-width: 400px; /* 最大幅を制限 */
-        flex: 1 1 350px; /* 【修正】400px以下になりそうなら折り返す設定 */
+        width: 100%;
+        max-width: 430px; /* カード自体の幅制限 */
+        flex: 1 1 400px;
+    }
+
+    /* PCでは画像の固定幅を少し大きくしてもOK */
+    .disco-img {
+        flex: 0 0 160px;
     }
     
     /* Video Cardsの調整 */
@@ -552,8 +612,8 @@ header {
 
     /* Layout Adjustments */
     .streamingLinks { flex-direction: row; }
-    .streamingLinks img { margin-top: 18px; }
-    .applemusic img { width: 60px; }
+    .streamingLinks img { margin-top: 0px; }
+    .applemusic img { width: 60px; position:relative; bottom: 1px;}
     .spotify img { width: 55px; }
 
     /* Lyric Page */
@@ -631,7 +691,8 @@ header {
     .scrolled-header .social-icons i { font-size: 15px; }
     
     .streamingLinks {
-        flex-direction: column;
+        flex-direction: row;
+        gap:0px;
     }
-    .streamingLinks img { margin-left: 20px; }
+    .streamingLinks img { margin-left: 10px; }
 }
