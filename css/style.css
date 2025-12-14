@@ -604,11 +604,15 @@ ul.ListOfSongs{
 }
 .toggle-btn:hover { background: #f6f6f6; }
 
+#lyrics-en{ margin-top: -7px;}
+
 .lyricsAndTranslation {
     display: flex;
     flex-direction: row;
+    font-family: "Noto Serif JP";
 }
 .translation {
+    font-family: "Noto Sans JP";
     position: relative;
     padding: 10px;
     border-radius: 10px;
