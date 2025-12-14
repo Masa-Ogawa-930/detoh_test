@@ -55,7 +55,7 @@ body::before {
 
 body {
     /* フォントフォールバックの追加: 特定のOSに依存しないように */
-    font-family: "Noto Serif JP", Calibri, "Hiragino Mincho ProN", serif;
+    font-family: "Noto Sans JP", Calibri, "Hiragino Mincho ProN", serif;
     max-width: 1400px;
     margin: 0 auto;
     padding-top: var(--header-height-base);
