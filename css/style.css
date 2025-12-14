@@ -868,6 +868,9 @@ ul.ListOfSongs{
     background-image: none; 
     opacity: 1
 }
+#home-page-black{
+    font-family: "Noto Serif JP";
+}
 
 #home-page-black .section{
     margin: 1rem 0;
