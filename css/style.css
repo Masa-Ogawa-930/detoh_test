@@ -439,8 +439,8 @@ header {
 }
 .profile-img {
     display: flex;
-    justify-content: left;
-    margin-left: 10px;
+    justify-content: center;
+    /* margin-left: 10px; */
     margin-bottom: 10px;
 }
 .profile-img img {
@@ -691,6 +691,7 @@ ul.ListOfSongs{
         min-width: 0; /* 固定のmin-width 500pxを削除 */
         flex: 1 1 400px; /* 【修正】400px以下になりそうなら折り返す */
     }
+
 }
 
 /* Tablet / Laptop (Medium Screens) */
@@ -708,7 +709,11 @@ ul.ListOfSongs{
         /* flex-wrap: wrap; */
         justify-content: space-evenly;
     }
-    
+    .profile-img {
+    justify-content: left;
+    margin-left: 10px;
+    }
+
     /* Header Adjustments */
     .header-logo {
         width: 280px;
@@ -824,7 +829,11 @@ ul.ListOfSongs{
     header { padding: 0; }
     
     .header-logo { width: 220px; }
-    
+
+    .profile-img {
+    justify-content: center;
+    margin-left: 0px;
+    }
     .social-icons {
         gap: 6px;
         padding: 0;
