@@ -97,7 +97,7 @@ Cuz I can only do the things I can do
         transCredit: "English translation: なたにあ"
     },
 
-    // ■ 2曲目 Torch (データは仮です。書き換えてください)
+    // ■ 2曲目 Torch
     "torch": {
         title: "Torch",
         credit: "<span class='credit-label'>Music & Lyrics:</span> kazu",
@@ -169,7 +169,7 @@ Something that can’t disappear
         transCredit: "English translation: なたにあ"
     },
 
-    // ■ 3曲目 Episode (翻訳がないパターンの例)
+    // ■ 3曲目 Episode
     "episode": {
         title: "Episode",
         credit: "<span class='credit-label'>Music & Lyrics:</span> kazu",
@@ -332,7 +332,7 @@ Something that can’t disappear
         lyricsEn: "", 
         transCredit: ""
     },
-"曲名(すべて小文字で": {
+"曲名(すべて小文字で)": {
         title: "曲名(大文字可)",
         credit: "<span class='credit-label'>Music & Lyrics:</span> kazu",
         image: "images/bluehaze_photo.png",

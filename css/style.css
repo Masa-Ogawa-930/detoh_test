@@ -185,6 +185,9 @@ header {
     margin-bottom: 4px;
     margin-left: -10px;
 }
+.news-card p {
+    margin: 0;       /* デフォルトの余白を消す */
+}
 
 /* Hover Effects for clickable cards */
 .mv-card:hover, .disco-card:hover {
