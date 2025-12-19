@@ -53,6 +53,16 @@ body::before {
     pointer-events: none; /* 背景がクリック操作の邪魔をしないように */
 }
 
+
+.sidebar-content h2,
+.main-content h2 {/* 曲名以外のh2を微かにグラデーションに。 */
+    background: linear-gradient(0deg, rgb(140,140,140) 0%,  rgb(0,0,0) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
 body {
     /* フォントフォールバックの追加: 特定のOSに依存しないように */
     font-family: "Noto Sans JP", Calibri, "Hiragino Mincho ProN", serif;
