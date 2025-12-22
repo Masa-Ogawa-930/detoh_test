@@ -94,7 +94,7 @@ in the meantime
 You should be able to do the things you can
 Cuz I can only do the things I can do
 `,
-        transCredit: "English translation: なたにあ"
+        transCredit: "English translation: Nathania"
     },
 
     // ■ 2曲目 Torch
@@ -164,7 +164,6 @@ Something intangible
 But
 Something that won’t disappear 
 Something that can’t disappear
-
 What to do
 Ah, the time has gone
 But things need to be done
@@ -200,9 +199,6 @@ The memory of standing here
 Both you and I have our own after all
 A sincere connection with no smoke or mirrors
 A torch that will shine on one day for another
-
-
-
 `,
         transCredit: "English translation: Nathania"
     },
