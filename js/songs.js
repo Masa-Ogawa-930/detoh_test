@@ -160,10 +160,10 @@ Tucked up in a narrow room
 Just 
 Something unseen 
 Something intangible
-
 But
 Something that won’t disappear 
 Something that can’t disappear
+
 What to do
 Ah, the time has gone
 But things need to be done
