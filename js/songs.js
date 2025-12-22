@@ -153,20 +153,58 @@ Cuz I can only do the things I can do
 `,
         lyricsEn: `
 I’d thought it was meaningless
-That it was just a passing dream
+That it was just a fixation
 Something to be forgotten
-Tucked up in a cramped room
+Tucked up in a narrow room
 
 Just 
 Something unseen 
 Something intangible
+
 But
 Something that won’t disappear 
 Something that can’t disappear
 
+What to do
+Ah, the time has gone
+But things need to be done
+
+A torch that was there after all
+On days where it’s hard to plead ignorance
+A torch with a meager flame
+A light that glows when you find it
+
+We traded sorrows with each other
+Without words of comfort
+And shared in the pain
+Then walked together and gazed
+From a familiar viewpoint
+With unfamiliar emotions
+
+Just
+Something unseen
+Something intangible
+But
+Something that won’t disappear
+Something that can’t disappear
+
+A pointless treasure
+But, because it made you smile
+
+A torch that was there after all
+A light that won’t go out since we spoke
+A torch that had been there from the beginning
+A light so precious whose fire you stoked
+
+The memory of standing here
+Both you and I have our own after all
+A sincere connection with no smoke or mirrors
+A torch that will shine on one day for another
+
+
 
 `,
-        transCredit: "English translation: なたにあ"
+        transCredit: "English translation: Nathania"
     },
 
     // ■ 3曲目 Episode
