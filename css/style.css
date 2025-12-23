@@ -637,9 +637,16 @@ ul.ListOfSongs{
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     scroll-margin-top: 45px;
 }
+
 #translator-credit{
     font-style: italic;
+    font-size: 0.9em; /* 少し小さく */
+    color: #191919;      /* グレーにして控えめに */
+    font-weight: normal;
+    margin-right: 2px;
+    font-family: "Noto Sans JP"
 }
+
 .hidden { display: none; }
 .backToHome {
     display: flex;

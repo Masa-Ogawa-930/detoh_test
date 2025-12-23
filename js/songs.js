@@ -94,7 +94,7 @@ in the meantime
 You should be able to do the things you can
 Cuz I can only do the things I can do
 `,
-        transCredit: "English translation: Nathania"
+        transCredit: "English translation: Nathania Nah"
     },
 
     // ■ 2曲目 Torch
@@ -200,7 +200,7 @@ Both you and I have our own after all
 A sincere connection with no smoke or mirrors
 A torch that will shine on one day for another
 `,
-        transCredit: "English translation: Nathania"
+        transCredit: "English translation: Nathania Nah"
     },
 
     // ■ 3曲目 Episode
