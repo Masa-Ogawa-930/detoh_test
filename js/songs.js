@@ -173,14 +173,15 @@ On days where it’s hard to plead ignorance
 A torch with a meager flame
 A light that glows when you find it
 
-We traded sorrows with each other
-Without words of comfort
-And shared in the pain
+Exchanging the same kind of pains
+That can’t be consoled
+And wear us down
+
 Then walked together and gazed
 From a familiar viewpoint
 With unfamiliar emotions
 
-Just
+Still
 Something unseen
 Something intangible
 But
@@ -191,7 +192,7 @@ A pointless treasure
 But, because it made you smile
 
 A torch that was there after all
-A light that won’t go out since we spoke
+A light that won’t go out since we talked
 A torch that had been there from the beginning
 A light so precious whose fire you stoked
 
