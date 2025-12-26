@@ -176,7 +176,6 @@ A light that glows when you find it
 Exchanging the same kind of pains
 That can’t be consoled
 And wear us down
-
 Then walked together and gazed
 From a familiar viewpoint
 With unfamiliar emotions
