@@ -65,6 +65,7 @@ body::before {
 
 body {
     /* フォントフォールバックの追加: 特定のOSに依存しないように */
+    /* font-family: "Hiragino Kaku Gothic ProN";  */
     font-family: "Noto Sans JP", Calibri, "Hiragino Mincho ProN", serif;
     max-width: 1400px;
     margin: 0 auto;
@@ -634,7 +635,7 @@ ul.ListOfSongs{
     margin-left: 50px;
     margin-top: -30px;
     display: block;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); */ 
     scroll-margin-top: 45px;
 }
 
