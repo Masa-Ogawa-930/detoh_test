@@ -680,7 +680,7 @@ ul.ListOfSongs{
         /* display: flex;
         flex-direction: column;
         gap: 0.5rem; */
-        position: sticky;
+        /* position: sticky; */
         top: 100px; /* ヘッダー分考慮 */
     }
     
